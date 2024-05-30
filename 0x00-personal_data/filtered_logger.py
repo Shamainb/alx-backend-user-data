@@ -4,7 +4,7 @@ import re
 
 def filter_datum(fields, redaction, message, separator):
     """
-    Arguments
+    Arguments:
     fields: a list of strings representing all fields to obfuscate
     redaction: a string representing by what the field will be obfuscated
     message: a string representing the log line
@@ -12,4 +12,4 @@ def filter_datum(fields, redaction, message, separator):
     is separating all fields in the log line (message)
     """
     pattern = f'({separator})({"|".join(fields)})(?={separator}|$)'
-    return re.sub(pattern, redaction, message)
+    return re.sub(pattern, f'\\1{redaction}', message)
