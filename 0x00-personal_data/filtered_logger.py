@@ -4,7 +4,7 @@ import re
 
 def filter_datum(fields, redaction, message, separator):
     """
-    Arguments:
+    Arguments
     fields: a list of strings representing all fields to obfuscate
     redaction: a string representing by what the field will be obfuscated
     message: a string representing the log line
