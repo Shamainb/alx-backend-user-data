@@ -10,6 +10,8 @@ from sqlalchemy import (
          )
 
 Base = declarative_base()
+
+
 class User(Base):
     """
     Def Class User
